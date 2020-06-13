@@ -2,12 +2,67 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:id="@+id/coordinator_layout"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/tv_your_tasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/font"
+            android:gravity="center"
+            android:text="Your Tasks "
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FFFF"
+
+            app:layout_anchorGravity="top|center" />
+
+
+
+
+       <!-- <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="186dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_wave_dark" />-->
+
+
+    </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
+        android:layout_marginTop="80dp"
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/row_layout" />
@@ -16,9 +71,114 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:fabSize="auto"
+        android:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/ic_baseline_add_24"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="32dp" />
 
-        android:layout_gravity="bottom|end"
-        android:layout_margin="32dp"
-         />
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/cv_good"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+           >
+
+
+            <ImageView
+                android:id="@+id/iv_rest"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="108dp"
+                android:layout_marginLeft="108dp"
+                android:layout_marginTop="132dp"
+                android:layout_marginEnd="103dp"
+                android:layout_marginRight="103dp"
+                android:layout_marginBottom="100dp"
+                android:src="@drawable/ic_coffeedoddle" />
+
+            <TextView
+                android:id="@+id/tv_good_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="103dp"
+                android:layout_marginLeft="103dp"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="100dp"
+                android:layout_marginRight="100dp"
+                android:gravity="center"
+                android:text="You've completed all your tasks! \n Time to wind down" />
+
+            <TextView
+                android:id="@+id/view_completed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+
+                android:layout_gravity="center"
+                android:layout_marginStart="119dp"
+                android:layout_marginLeft="119dp"
+                android:layout_marginTop="353dp"
+                android:layout_marginEnd="110dp"
+                android:layout_marginRight="110dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="View Completed Tasks"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tv_good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="155dp"
+                android:layout_marginLeft="155dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="150dp"
+                android:layout_marginRight="150dp"
+                android:fontFamily="@font/font"
+                android:gravity="center"
+                android:text=" Good Job!"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorPrimary"
+
+                app:layout_anchorGravity="top|center" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

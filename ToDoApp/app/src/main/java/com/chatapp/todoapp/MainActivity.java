@@ -3,6 +3,7 @@ package com.chatapp.todoapp;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -19,6 +20,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -27,6 +29,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements NoteAdapter.OnNoteClick {
 
@@ -34,9 +37,13 @@ public class MainActivity extends AppCompatActivity implements NoteAdapter.OnNot
     NoteAdapter adapter;
     FloatingActionButton fab;
     ArrayList<Note> arrayList;
+    int c = 0;
     private NoteViewModel noteViewModel;
     CoordinatorLayout coordinatorLayout;
+    ImageView iv;
     RadioButton radioButton;
+    CardView cardView;
+    private int[] img_chill = new int[]{R.drawable.ic_doogiedoodle, R.drawable.ic_icecreamdoodle, R.drawable.ic_coffeedoddle};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +52,9 @@ public class MainActivity extends AppCompatActivity implements NoteAdapter.OnNot
 
         final RecyclerView recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        cardView = findViewById(R.id.cv_good);
         recyclerView.setHasFixedSize(true);
+        iv = findViewById(R.id.iv_rest);
         adapter = new NoteAdapter(this,this);
         coordinatorLayout = findViewById(R.id.coordinator_layout);
         recyclerView.setAdapter(adapter);
@@ -76,6 +85,21 @@ public class MainActivity extends AppCompatActivity implements NoteAdapter.OnNot
             @Override
             public void onChanged(List<Note> notes) { //every time data changes
                 adapter.submitList(notes);
+                for(Note note :notes){
+                    if (note.getDone()) {
+                        c++;
+                    }
+                    else{
+                        break;
+                    }
+                }
+                if(c == notes.size()){
+                    cardView.setVisibility(View.VISIBLE);
+                    recyclerView.setVisibility(View.GONE);
+
+                    int rnd = new Random().nextInt(img_chill.length);
+                    iv.setImageResource(rnd);
+                }
                 adapter.notifyDataSetChanged();
                 System.out.println("changed");
 

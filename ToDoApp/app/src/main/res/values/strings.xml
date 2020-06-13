@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ToDoApp</string>
+    <string name="sample">sample</string>
 </resources>

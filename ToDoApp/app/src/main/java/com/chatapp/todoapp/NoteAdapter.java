@@ -28,12 +28,17 @@ public class NoteAdapter extends ListAdapter<Note,NoteAdapter.ViewHolder> {
     private LayoutInflater inflater;
     OnNoteClick onNoteClick;
     private OnNoteClick listener;
+    SharedPreference sharedPreference ;
+    Context context;
 
     public NoteAdapter( Context context, OnNoteClick onNoteClick) {
         super(DIFF_CALLBACK);
         //*this.noteArrayList = notes;*//*
         inflater =LayoutInflater.from(context);
         this.onNoteClick = onNoteClick;
+        this.context = context;
+
+        sharedPreference = new SharedPreference(context);
 
     }
     private static final DiffUtil.ItemCallback<Note> DIFF_CALLBACK = new DiffUtil.ItemCallback<Note>() {
@@ -107,7 +112,9 @@ public class NoteAdapter extends ListAdapter<Note,NoteAdapter.ViewHolder> {
             imageView = itemView.findViewById(R.id.undo);
 
 
+
             date = itemView.findViewById(R.id.tv_date);
+
 
             radioButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -116,6 +123,7 @@ public class NoteAdapter extends ListAdapter<Note,NoteAdapter.ViewHolder> {
                         title.setPaintFlags(title.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                         radioButton.setVisibility(View.GONE);
                         imageView.setVisibility(View.VISIBLE);
+
 
 
                 }
