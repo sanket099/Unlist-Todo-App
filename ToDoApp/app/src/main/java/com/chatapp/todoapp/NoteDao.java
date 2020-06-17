@@ -27,7 +27,7 @@ public interface NoteDao { //either interface or abstract class as we dont provi
     @Query("DELETE FROM note_table")
     void DeleteAllNotes();
 
-    @Query("SELECT * FROM note_table Order By date Desc ")
+    @Query("SELECT * FROM note_table Order By date Asc ")
     LiveData<List<Note>> getAllNotes();  //updates and returns
 
 
