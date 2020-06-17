@@ -22,13 +22,15 @@
 
         <activity
             android:name=".AddNoteActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".DisplayTasksActivity"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".DisplayTasksActivity"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme2">
+            android:theme="@style/AppTheme">
 
         </activity>
+
+        <receiver android:name=".Broadcast"/>
     </application>
 
 </manifest>

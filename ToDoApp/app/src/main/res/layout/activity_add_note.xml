@@ -1,53 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
 
-    android:padding="20dp"
+
     tools:context=".AddNoteActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+
+
+
+
+    <ImageView
+        android:id="@+id/iv_voice_desc"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="3dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_round_mic_24" />
+
+    <ImageView
+        android:id="@+id/iv_voice_title"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="3dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_round_mic_24" />
 
     <EditText
         android:id="@+id/edit_text_title"
-        android:layout_width="match_parent"
+        android:layout_width="298dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:fontFamily="@font/font"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginRight="51dp"
         android:hint="Title"
         android:inputType="text" />
 
 
     <EditText
         android:id="@+id/edit_text_description"
-        android:layout_width="match_parent"
+        android:layout_width="298dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
         android:layout_below="@+id/edit_text_title"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/font"
         android:layout_marginTop="35dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginRight="51dp"
         android:hint="Description"
         android:inputType="textMultiLine" />
 
     <TextView
         android:id="@+id/tv_date"
-        android:layout_width="161dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edit_text_description"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_marginStart="20dp"
-
+        android:fontFamily="@font/font"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="29dp"
         android:background="@drawable/button"
@@ -56,12 +102,13 @@
         android:focusable="true"
         android:padding="10dp"
         android:text="Date"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="#FFFF" />
 
     <TextView
         android:id="@+id/tv_time"
-        android:layout_width="161dp"
+        android:fontFamily="@font/font"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edit_text_description"
         android:layout_alignParentRight="true"
@@ -76,10 +123,12 @@
         android:focusable="true"
         android:padding="10dp"
         android:text="Time"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="#FFFF"
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="20dp" />
+
+
 
 
     <TextView
@@ -89,6 +138,7 @@
         android:layout_below="@+id/edit_text_description"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:id="@+id/priority"
         android:fontFamily="@font/font"
         android:textColor="@color/colorPrimary"
         android:layout_alignParentEnd="true"
@@ -107,16 +157,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        android:layout_below="@+id/priority"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+
         android:layout_alignParentEnd="true"
+
         android:layout_alignParentRight="true"
-        android:layout_marginStart="150dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="351dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginRight="150dp" />
+        android:layout_marginStart="130dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginRight="130dp" />
 
 
 </RelativeLayout>
+</ScrollView>

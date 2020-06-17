@@ -30,6 +30,10 @@ public class Note {
         return time;
     }
 
+    public void setDone(Boolean done) {
+        this.done = done;
+    }
+
     public String getDate() {
         return date;
     }

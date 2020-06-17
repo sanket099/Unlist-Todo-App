@@ -9,7 +9,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="440dp"
         android:layout_alignParentTop="true"
         android:background="#FFFF"
         android:layout_alignParentStart="true"
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="186dp"
+        android:layout_marginTop="318dp"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_wave4" />
 
@@ -30,9 +30,11 @@
         android:layout_width="match_parent"
         android:layout_height="190dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="166dp"
+
+
         android:layout_marginBottom="8dp"
-        android:padding="10dp" />
+        android:padding="20dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -41,9 +43,10 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
 
-        android:layout_marginTop="451dp"
+
+        android:layout_marginTop="43dp"
         android:fontFamily="@font/font"
-        android:text="Go Ahead!"
+        android:text="Hey there!"
 
 
         android:textColor="@color/colorPrimary"
@@ -55,12 +58,12 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:fontFamily="@font/font"
+        android:layout_marginTop="95dp"
         android:alpha="0.5"
 
-        android:layout_marginTop="502dp"
+        android:fontFamily="@font/font"
 
-        android:text="what are you waiting for?"
+        android:text="Welcome! Great to see you"
 
 
         android:textColor="@color/colorPrimary"
@@ -77,21 +80,24 @@
 
     <TextView
         android:id="@+id/tv_pic_info"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:fontFamily="@font/font"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:padding="10dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginLeft="21dp"
-        android:layout_marginTop="248dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginRight="19dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="388dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/font"
         android:gravity="center"
         android:text="@string/sample"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/colorPrimary"
         android:visibility="visible" />
 

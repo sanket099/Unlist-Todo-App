@@ -31,11 +31,11 @@ public abstract class NoteDatabase extends RoomDatabase {
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
 
-            new PopulateDb(instance).execute();
+           // new PopulateDb(instance).execute();
         }
     };
 
-    private static class  PopulateDb extends AsyncTask<Note,Void,Void>{
+  /*  private static class  PopulateDb extends AsyncTask<Note,Void,Void>{
 
         private NoteDao noteDao;
 
@@ -45,10 +45,10 @@ public abstract class NoteDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(Note... notes) {
-            noteDao.Insert(new Note("title","description" , 1,"date","time",true));
+           // noteDao.Insert(new Note("title","description" , 1,"date","time",true));
 
             return null;
         }
     }
-
+*/
 }

@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">ToDoApp</string>
     <string name="sample">sample</string>
+    <string name="goodjob">Good Job!</string>
+    <string name="Welcome">Welcome!</string>
+    <string name="welcomegoahead">Go ahead and write your first task</string>
+    <string name="rest">You\'ve Completed all your tasks. \n Take some rest :)</string>
+    <string name="hey_there">Hey there!</string>
+    <string name="after_del">Add some tasks to make your day more productive</string>
 </resources>
