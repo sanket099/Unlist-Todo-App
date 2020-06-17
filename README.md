@@ -1,2 +1,3 @@
-# say_no_to_procrastination
-ToDoApp with MVVM and Room
+# ToDoApp
+ToDoApp has one purpose : to help you increase your productivity.
+
